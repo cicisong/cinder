@@ -56,7 +56,7 @@ class DotHillClient(object):
         self._session_key = None
         try:
             tree = etree.XML(xml)
-            if (tree.findtext(".//PROPERTY[@name='response-type']".lower()) ==
+            if (tree.findtext(".//PROPERTY[@name='response-type']").lower() ==
                     "success".lower()):
                 self._session_key = (
                     tree.findtext(".//PROPERTY[@name='response']"))
